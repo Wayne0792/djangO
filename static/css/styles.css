@@ -1,0 +1,38 @@
+
+
+h3 {
+
+    color: rgb(149, 0, 255);
+}
+
+.form-layout{
+    border-radius: 15px;
+    width: 500px;
+}
+
+
+/* Center the container horizontally and vertically */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed to center vertically */
+  }
+  
+  /* Style the button */
+.btn {
+    /* Add your desired button styles here */
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+  
+
+  
+  

@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Navigation Bar</title>
+  <style>
+    /* Reset some default styles */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Style for the navigation bar */
+    nav {
+      background-color: #333;
+      padding: 10px 20px;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    
+    nav li {
+      margin-right: 20px;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: white;
+    }
+    
+    nav a:hover {
+      border-bottom: 2px solid white;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="{% url '' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'register' %}">Register</a></li>
+       
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'my-logout' %}">Logout</a></li>
+      {% else %}
+        <li><a href="{% url 'my-login' %}">Login</a></li>
+      {% endif %}
+
+    </ul>
+  </nav>
+  
+  <!-- Your page content goes here -->
+</body>
+</html>
